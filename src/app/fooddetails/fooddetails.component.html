@@ -1,0 +1,23 @@
+<div class="food-details-wrap">
+    <div class="food-details-inner">
+        <div class="close">
+            <button (click)="closeDetails()" class="close-btn"><img src="../assets/images/close.png"></button>
+        </div>
+        <div class="scrollable-content">
+            <div class="food-image">
+                <img src="{{ foodDetails.url }}">
+            </div>
+            <div class="food-content">
+                <div class="name-price">
+                    <div class="column name">
+                        <h3>{{ foodDetails.name }}</h3>
+                    </div>
+                    <div class="column price">    
+                        <h4>&#8377; {{ foodDetails.price }}</h4>
+                    </div>    
+                </div>
+                <p>{{ foodDetails.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>

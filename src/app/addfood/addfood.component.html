@@ -1,0 +1,39 @@
+<div class="add-food">
+	<div class="container">
+		<form (ngSubmit)="formSubmit(addForm)" #addForm="ngForm">
+			<div class="form-group">
+				<div class="input">
+					<input placeholder="Name" type="text" ngModel class="form-control"  name="name" required #name="ngModel">
+					<span class="help-block" *ngIf="!name.valid && name.touched">Please enter the name</span>
+				</div>
+				<div class="input">
+					<input placeholder="Price" [min]="0" min="0" type="number"  pattern="[0-9 ]*" ngModel class="form-control" name="price" required #price="ngModel">
+					<span class="help-block" *ngIf="(price.value === '' || price.value == undefined) && price.touched">Please enter the price</span>
+					<span class="help-block" *ngIf="price.value < 0 && !price.valid && price.touched">Please enter valid price</span>
+				</div>
+				<div class="input">
+					<input placeholder="Image URL" type="url" ngModel class="form-control" name="url" required #url="ngModel">
+					<span class="help-block" *ngIf="!url.valid && url.touched">Please enter the URL</span>
+				</div>  
+			</div>
+			<div class="form-group">
+				<div class="input">
+					<textarea class="form-control" name="description" ngModel placeholder="Description" required #description="ngModel">Description</textarea>    
+					<span class="help-block" *ngIf="!description.valid && description.touched">Please enter the Description</span>
+				</div>
+				<div class="input">
+					<select class="form-control" ngModel name="categories" required #categories="ngModel">
+					<option value="" disabled selected>Select your option</option>
+					<option *ngFor="let category of categoriesList" value={{category.name}}>
+						{{category.name}}
+					</option>
+					</select>
+					<span class="help-block" *ngIf="!categories.valid && categories.touched">Please select the Category</span>
+				</div>  
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-default" [disabled]="!addForm.valid">Add Food</button>
+			</div>  
+		</form>
+	</div>
+</div>

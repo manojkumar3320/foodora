@@ -1,0 +1,12 @@
+<div class="food-item">
+    <div 
+        class="food-image"
+        [ngStyle]="{'background-image': 'url(' + food.url + ')'}"
+    >
+    </div>
+    <div class="food-content">
+        <h3>{{ food.name }}</h3>
+        <h4>&#8377;{{ food.price }}</h4>
+        <p>{{ textTruncate(food.description,280,'...') }}</p>
+    </div>
+</div>

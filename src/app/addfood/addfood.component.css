@@ -1,0 +1,88 @@
+form input, form select, form textarea {
+    display: inline-block;
+    width: 100%;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    box-shadow: none;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 25px;
+    padding: 9px 10px;
+    resize: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    color: #757575;
+    height:40px;
+    vertical-align: top;
+}
+
+button.btn.btn-default {
+    display: inline-block;
+    padding: 8px 20px;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    background: #03A9F4;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 5px;
+    margin: 40px auto 0;
+    float: none;
+    cursor: pointer;
+    border: 1px solid #03A9F4;
+    width: 100%;
+    max-width: 150px;
+}
+
+button.btn.btn-default:hover{
+    background:#ffffff;
+    color:#03A9F4;
+}
+
+button.btn.btn-default[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.form-group{
+    text-align:center;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+}
+
+form .form-group .input {
+    width: 32.333%;
+    display: inline-block;
+    margin-right: 1.5%;
+    position: relative;
+}
+
+form .form-group .input:last-child {
+    margin-right:0;
+}
+
+
+form .form-group .input .help-block{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+@media (max-width:1000px){
+
+    form .form-group .input {
+        width:100%;
+    }
+
+}
